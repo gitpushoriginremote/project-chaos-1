@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chaos Dashboard</title>
+</head>
+<body class="industrial-theme">
+    <nav>
+        <span class="logo">C.H.A.O.S</span>
+        <a href="index.html">Logout</a>
+    </nav>
+    <main class="dashboard">
+        <section class="widget entropy-meter">
+            <h2>Current Entropy</h2>
+            <div class="gauge">
+                <div id="gauge-fill" class="gauge-fill"></div>
+            </div>
+            <p id="entropy-value">0.00%</p>
+        </section>
+        <section class="widget event-log">
+            <h2>Incident Logs</h2>
+            <ul id="log-list">
+                <li>[08:00] System Initialized</li>
+                <!-- TODO: Implement dynamic log population -->
+            </ul>
+        </section>
+        <section class="controls">
+            <button onclick="increaseEntropy()">Inject Noise</button>
+            <button onclick="resetEntropy()">Stabilize</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
