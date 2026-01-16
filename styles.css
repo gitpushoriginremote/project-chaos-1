@@ -1,0 +1,71 @@
+:root {
+    --bg-color: #0d0d0d;
+    --accent-red: #ff4d4d;
+    --text-color: #e0e0e0;
+    --panel-bg: #1a1a1a;
+}
+
+body.industrial-theme {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.landing-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    border: 2px solid var(--accent-red);
+    color: var(--accent-red);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--accent-red);
+    color: black;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.widget {
+    background: var(--panel-bg);
+    padding: 20px;
+    border-left: 5px solid var(--accent-red);
+}
+
+.gauge {
+    width: 100%;
+    background: #333;
+    height: 30px;
+    position: relative;
+}
+
+.gauge-fill {
+    height: 100%;
+    background: var(--accent-red);
+    width: 0%; /* Start at 0 */
+    transition: width 0.5s ease-in-out;
+}
+
+/* VISUAL DEFECT: The Incident Log list has no max-height and will break layout when too many items are added */
+#log-list {
+    list-style: none;
+    padding: 0;
+}
